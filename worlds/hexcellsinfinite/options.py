@@ -53,15 +53,22 @@ class HardGeneration(Toggle):
     """
     display_name = "Hard Generation"
 
+class RequireClearingCollectedLevels(Toggle):
+    """
+    When enabled, all levels have to be cleared to complete the goal, even ones that have already been collected (eg. by a game completing its goal or manually with /collect).
+    """
+    display_name = "Require Clearing Collected Levels"
+
 @dataclass
 class HexcellsInfiniteOptions(PerGameCommonOptions):
 
-    RequirePerfectClears:         RequirePerfectClears
-    PuzzleOptions:                PuzzleOptions
-    EnableShields:                EnableShields
-    LevelUnlockType:              LevelUnlockType
-    HardGeneration:               HardGeneration
+    RequirePerfectClears:           RequirePerfectClears
+    PuzzleOptions:                  PuzzleOptions
+    EnableShields:                  EnableShields
+    LevelUnlockType:                LevelUnlockType
+    HardGeneration:                 HardGeneration
+    RequireClearingCollectedLevels: RequireClearingCollectedLevels
 
 hexcells_infinite_option_groups: dict[str, list[Any]] = {
-    "General Options": [RequirePerfectClears, PuzzleOptions, EnableShields, LevelUnlockType, HardGeneration],
+    "General Options": [RequirePerfectClears, PuzzleOptions, EnableShields, LevelUnlockType, HardGeneration, RequireClearingCollectedLevels],
 }

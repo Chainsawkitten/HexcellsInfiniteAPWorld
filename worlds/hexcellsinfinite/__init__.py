@@ -49,11 +49,12 @@ class HexcellsInfiniteWorld(World):
     def fill_slot_data(self) -> dict[str, object]:
         slot_data: dict[str, object] = {
             "options": {
-                  "RequirePerfectClears":     self.options.RequirePerfectClears.value,
-                  "PuzzleOptions":            self.options.PuzzleOptions.value,
-                  "EnableShields":            self.options.EnableShields.value,
-                  "LevelUnlockType":          self.options.LevelUnlockType.value,
-                  "HardGeneration":           self.options.HardGeneration.value
+                  "RequirePerfectClears":           self.options.RequirePerfectClears.value,
+                  "PuzzleOptions":                  self.options.PuzzleOptions.value,
+                  "EnableShields":                  self.options.EnableShields.value,
+                  "LevelUnlockType":                self.options.LevelUnlockType.value,
+                  "HardGeneration":                 self.options.HardGeneration.value,
+                  "RequireClearingCollectedLevels": self.options.RequireClearingCollectedLevels.value
             },
             "Seed": self.multiworld.seed_name,
             "Slot": self.player_name,
